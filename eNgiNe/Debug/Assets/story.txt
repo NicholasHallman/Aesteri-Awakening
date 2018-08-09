@@ -1,0 +1,42 @@
+Assets from
+SFX Electroviolence
+Music PunchDeck
+East River OurMusicBox.com Jay Man
+cave ambience julius_galla
+Juandamb running sound
+orangesheepdog sword swing
+
+Game Story
+
+The aesteri people once rulled an ancient civilization said to have powered their 
+lives using aester. Shooting stars that landed on the surface of their home where
+used and returned to the nights sky to be recharged by the mother star. However, their
+thirst for power grew and eventually they stopped returning the stars. All the light
+from the night sky faded and the stars on the ground lost their power. The aesteri
+fell into a dark age. rebellions, civil wars and a hundred years 
+of conflict left their cities in rubel and their people suffering. None remain of
+this once powerfull people.
+
+Awaken, Hero from beyond time. Chosen by the mother star. Return my children. bring
+back your people... 
+
+Old Man Dialogue
+
+0"Ohohoho! Hello there youth. Welcome to my home! Or",
+"atleast what's left of it...Any who, you've probably",
+"seen all those black obolisks around yes? Well if you",
+"could get rid of all of those on these fair islands",
+"I'll let you in on a little secret. Go on then!" ,
+"Only %d more to go!",
+6"Welcome back! You still haven't gotten rid of all" ,
+"the obolisks! still %d left!",
+8"You're back! Thank you for helping me! I guess I'll" ,
+"return the favor huh? Meet me on the north island." ,
+"I'll repair the bridge so you can get there.",
+11"Many dangers await you on the coast of the Aesterian" ,
+"continent. This sword should protect you. Theres a boat" ,
+"on the beach anytime you're ready to go. Good luck kid!"
+
+buffer	0x00f3f5a4 
+
+Dungeon maps are 21 x 13 or 1344 x 832
