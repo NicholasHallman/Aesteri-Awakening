@@ -29,6 +29,7 @@ void Intro::draw(BITMAP * buffer)
 		if (blink) {
 			textout_centre_ex(buffer, font, "PRESS ENTER", SCREEN_W / 2 + 20, SCREEN_H / 5 * 4, makecol(255, 255, 255), -1);
 		}
+		textout_centre_ex(buffer, font, "HELP CTRL - H", SCREEN_W / 2 + 20, (SCREEN_H / 5 * 4) + 45, makecol(255, 255, 255), -1);
 		blinkFrame+=1;
 	}
 }

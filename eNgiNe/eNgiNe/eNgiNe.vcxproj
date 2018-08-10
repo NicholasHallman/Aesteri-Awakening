@@ -124,6 +124,7 @@
     <ClInclude Include="Dungeon.h" />
     <ClInclude Include="DungeonScene.h" />
     <ClInclude Include="eNgiNe.h" />
+    <ClInclude Include="Instructions.h" />
     <ClInclude Include="int2.h" />
     <ClInclude Include="Intro.h" />
     <ClInclude Include="map.h" />
@@ -145,6 +146,7 @@
     <ClCompile Include="Dungeon.cpp" />
     <ClCompile Include="DungeonScene.cpp" />
     <ClCompile Include="eNgiNe.cpp" />
+    <ClCompile Include="Instructions.cpp" />
     <ClCompile Include="Intro.cpp" />
     <ClCompile Include="OldMan.cpp" />
     <ClCompile Include="OverworldScene.cpp" />

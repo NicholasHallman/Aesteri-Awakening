@@ -6,6 +6,7 @@
 #include "DungeonScene.h"
 #include "OverworldScene.h"
 #include "TitleScene.h"
+#include "Instructions.h"
 
 class Stage 
 {
@@ -35,6 +36,7 @@ public:
 	Display * findObjectByName(const char *);
 	~Stage();
 	float deltaTime = 0;
+	Instructions * instruction;
 protected:
 	Player * player;
 	Display* world;
@@ -52,5 +54,7 @@ protected:
 	DungeonScene * ds;
 	OverworldScene * os;
 	TitleScene * is;
+	bool updateLock = false;
+	bool releasedCtrl = true;
 };
 

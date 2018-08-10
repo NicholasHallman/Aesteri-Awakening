@@ -25,6 +25,8 @@ Stage::Stage(int width, int height)
 	ds = new DungeonScene;
 	os = new OverworldScene;
 	is = new TitleScene;
+	instruction = new Instructions();
+	instruction->hide = true;
 }
 
 void Stage::addChild(Display * child)
@@ -94,6 +96,7 @@ void Stage::update()
 			temp->draw(buffer, world->x, world->y);
 		}
 	}
+	instruction->draw(buffer);
 	blit(buffer, screen, 0, 0, 0, 0, w, h);
 	
 }
@@ -170,6 +173,18 @@ void Stage::runEventLoop()
 	runStart();
 	while (true) {
 		if (key[KEY_ESC]) return;
+		if (key[KEY_LCONTROL] && key[KEY_H] && instruction->hide && releasedCtrl) {
+			instruction->hide = false;
+			updateLock = true;
+			releasedCtrl = false;
+		}
+		else if (key[KEY_LCONTROL] && key[KEY_H] && !instruction->hide && releasedCtrl) {
+			instruction->hide = true;
+			updateLock = false;
+			releasedCtrl = false;
+		}
+		if (!key[KEY_LCONTROL] && !key[KEY_H] && !releasedCtrl) releasedCtrl = true;
+
 		clock_t currentTime = clock();
 		if (currentTime - pastTime > fpsInMS) {
 			clock_t time = clock();
@@ -179,8 +194,10 @@ void Stage::runEventLoop()
 			if (FrameEvent != NULL) {
 				FrameEvent();
 			}
-			runLogic();
+			if (!updateLock) runLogic();
+			instruction->Logic();
 			update();
+			
 			//pastTime = clock();
 			//clock_t duration = clock() - time;
 			//deltaTime = (30 / (double)1000 / (double)duration) * 10;
